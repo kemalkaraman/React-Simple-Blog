@@ -21,7 +21,6 @@ class Pagination extends Component {
    
     return (
       <StyledPagination>
-        
         <div  name="#pagination" className="test">{this.renderButtons(count)}</div>
       </StyledPagination>
     );

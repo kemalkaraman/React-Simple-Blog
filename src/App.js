@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import ArticleDetails from "./pages/Articles/components/ArticleDetails";
 import Article from "./pages/Articles";
 import NotFound from "./layouts/notFound";
-import CKEditor from '../src/pages/CKEditor';
 
 class App extends Component {
   render() {
@@ -13,7 +12,6 @@ class App extends Component {
       <BrowserRouter>
           <Switch>
             <Route  exact path="/" component={Home} />
-            <Route path="/CreatePost" component={CKEditor} />
             <Route path="/Article" component={Article} />
             <Route path="*" component={NotFound} />
             </Switch>

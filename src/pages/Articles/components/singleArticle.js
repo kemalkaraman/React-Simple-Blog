@@ -28,7 +28,7 @@ class Article extends Component {
         </div>
         <div className="card-footer text-muted">
          bu içerik
-          <a href="#">Startt Bootstrap</a>
+          <a href="#">Startta Bootstrap</a>
         </div>
       </div>
     );

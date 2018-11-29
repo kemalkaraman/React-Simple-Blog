@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 class RightBar extends Component {
   render() {
-    const { categories } = this.props;
+    /* const { categories } = this.props; */
     return (
       <div className="col-md-4">
         <div className="card my-4">
@@ -28,9 +28,9 @@ class RightBar extends Component {
           <div className="card-body">
             <div className="row">
               <div className="col-lg-6">
-              {categories.map(makale => (
+              {/* categories.map(makale => (
               <ul className="list-unstyled mb-0">{makale.KategoriAdi}</ul>)
-               ) }
+               )  */}
                 
               </div>
             </div>

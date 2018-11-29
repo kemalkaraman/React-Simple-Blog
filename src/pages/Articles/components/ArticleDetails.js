@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 class ArticleDetails extends Component {
   render() {
-    const { data,detailId} = this.props;
+    const { data, detailId } = this.props;
     console.log(detailId);
     return (
       <div key={data._id}>
@@ -22,14 +22,9 @@ class ArticleDetails extends Component {
           <div className="card-body">
             <p className="card-text">
               <h6 className="card-title">{data.MakaleBaslik}</h6>
-              {/* <ArticleText> */}
-                {data.MakaleIcerik}
-             {/*    <span> ...</span>
-              </ArticleText> */}
+              {data.MakaleIcerik}
             </p>
-           
           </div>
-       
         </div>
       </div>
     );
@@ -46,6 +41,5 @@ const Imagess = styled.img`
   height: 300px;
   width: 700px;
 `;
-
 
 export default ArticleDetails;

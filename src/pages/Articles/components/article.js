@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { truncate } from "../../../helpers/utilities";
 import { Link } from "react-router-dom";
-import {connect} from 'react-redux'
-import * as action from '../../../redux/actions/action';
-
+import { connect } from "react-redux";
+import * as action from "../../../redux/actions/action";
 
 export const TRUNCATION_LIMIT = 400;
 
@@ -13,20 +12,23 @@ class Article extends Component {
     super(props);
   }
 
-  
-  doneTask =(e)=> {
-    action.SetDetailId(e.target.id)
-  }
+  doneTask = e => {
+    action.SetDetailId(e.target.id);
+  };
 
+ 
   render() {
-    const { data,detailId} = this.props;
-    console.log(detailId);
+    const { data, detailId } = this.props;
+    
+
+   
     return (
       <div key={data._id}>
+      
         <div>
-         
-            <h2  id={data._id} onClick={this.doneTask}   className="card-title">{data.MakaleBaslik}</h2>
-     
+          <h2 id={data._id} onClick={this.doneTask} className="card-title">
+            {data.MakaleBaslik}
+          </h2>
           <Imagess
             className="card-img-top"
             src={data.MakaleResimUrl}
@@ -71,8 +73,8 @@ const Imagess = styled.img`
   width: 700px;
 `;
 
-const mapStateToProps = (state,ownProps) =>  ({
-  detailId : state.reducer.detailId
+const mapStateToProps = (state, ownProps) => ({
+  detailId: state.reducer.detailId
 });
 Article = connect(mapStateToProps)(Article);
 export default Article;
